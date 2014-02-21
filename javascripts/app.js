@@ -1,8 +1,9 @@
-
-
   ///////////////
   ///TREE DATA///
   ///////////////
+
+  var treeDivIds = ["manhattan_trees", "brooklyn_trees", "bronx_trees", "queens_trees"]
+  var treeHeadings = ["Trees in Manhattan", "Trees in Brooklyn", "Trees in the Bronx", "Trees in Queens"]
 
   var manhattanTreeData = manhattan_trees.data
   var manhattanTreeDataLength = manhattanTreeData.length
@@ -24,15 +25,16 @@
   _.each(allTreeLengths, function(tree){
       treeProjection.data([tree])
                 .append('div')
-                .style('width', function(d){return (d/100) + 'px' })
-                .style('height', function(d){ return (d/100) + 'px' })
+                .transition().style('width', function(d){ return (d/100) + 'px' })
+                .transition().style('height', function(d){ return (d/100) + 'px' })
                 .style({
                   'background-color': "tomato",
                   'border-radius': "100%",
                   'opacity': "0.5",
-                  'margin': "0 auto",
-                  'float': "left"
-            })
+                  'margin': "0 auto"
+                  // 'float': "left"
+                })
+                .text(treeHeadings.shift())
   })
 
   ///////////////
@@ -66,6 +68,9 @@
     }   
   })
 
+  var wifiDivIds = ["manhattan_wifi", "brooklyn_wifi", "bronx_wifi", "queens_wifi"]
+  var wifiHeadings = ["Wifi in Manhattan", "Wifi in Brooklyn", "Wifi in the Bronx", "Wifi in Queens"]
+
   var manhattanWifiLength = manhattanWifi.length
   var brooklynWifiLength = brooklynWifi.length
   var bronxWifiLength = bronxWifi.length
@@ -79,13 +84,16 @@
   _.each(allWifiLengths, function(wifi){
     wifiProjection.data([wifi])
             .append('div')
-            .style('width', function(d){return (d) + 'px' })
-            .style('height', function(d){ return (d) + 'px' })
+            .attr('id', "wifi")
+            .transition().style('width', function(d){return (d) + 'px' })
+            .transition().style('height', function(d){ return (d) + 'px' })
             .style({
                 'background-color': "cornflowerblue",
                 'border-radius': "100%",
                 'opacity': "0.5",
                 'margin': "0 auto",
-                'float':"right"
+                'margin-top': "50px",
+                'margin-bottom': "50px"
             })
+            .text(wifiHeadings.shift())
   })
