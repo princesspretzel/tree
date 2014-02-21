@@ -5,41 +5,25 @@
     <title>Tree</title>
       <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
 
-      <script type="text/javascript" src="bower_components/jquery/jquery.min.js"></script>
+      <script type="text/javascript" src="javascripts/jquery.min.js"></script>
+      <script type="text/javascript" src="javascripts/d3.v3.min.js"></script>
+      <script type="text/javascript" src="javascripts/underscore-min.js"></script>
 
-      <script type="text/javascript" src="javascripts/topojson.v1.min.js"></script>
-      <script src="bower_components/d3/d3.min.js" charset="utf-8"></script>
-
-      <link rel="stylesheet" href="bower_components/simple-map-d3/dist/simple-map-d3.css">
-      <script src="bower_components/simple-map-d3/dist/simple-map-d3.js" charset="utf-8"></script>
-
-      <script type="text/javascript" src="javascripts/trees.js"></script>
+      <script type="text/javascript" src="javascripts/manhattan_trees.js"></script>
       <script type="text/javascript" src="javascripts/wifi.js"></script>
+
+      <script type="text/javascript" src="javascripts/app.js"></script>
+
   </head>
   <body>
 
-    <div id="main-container"></div>
+    <div id="main_container">
 
-    <script type="text/javascript">
 
-      d3.select("body").append("p").text("Leafs!");
+    </div>
 
-      var projection = d3.select("svg").selectAll("text").data(trees);
-      projection.enter().append("text");
+    <ul id='addresses'>
+    </ul>
 
-      var width = "100%",
-          height = "100%";
-
-      var svg = d3.select("body").append("svg")
-           .attr("width", width)
-           .attr("height", height);
-
-      // d3.json("", function(error, map) {
-      //      svg.append("path")
-      //      .datum(topojson.feature(map, map))
-      //      .attr("d", d3.geo.path().projection(d3.geo.mercator()));
-      //  })
-
-    </script>
   </body>
 </html>
