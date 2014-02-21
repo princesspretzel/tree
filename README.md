@@ -1,1 +1,0 @@
-Treespot is a data visualization that shows wifi hotspots and tree locations in NYC so that you can find the best places to code outdoors when the weather is nice :)
