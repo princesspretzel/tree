@@ -1,0 +1,30 @@
+body {
+  position: relative;
+  text-align: center;
+}
+
+#tree_container {
+  margin: 0 auto;
+  float: left;
+  position: absolute;
+  margin-left: 10%;
+  font-size: 3em;
+  font-family: helvetica;
+}
+
+#tree_container div div {
+  margin-bottom: 10px;
+}
+
+#wifi_container {
+  margin: 0 auto;
+  float: right;
+  position: absolute;
+  margin-right: 10%;
+  font-size: 2em;
+  font-family: helvetica;
+}
+
+#wifi_container div div{
+  margin-bottom: 625px;
+}

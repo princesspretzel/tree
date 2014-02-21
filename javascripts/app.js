@@ -31,8 +31,6 @@
                   'background-color': "tomato",
                   'border-radius': "100%",
                   'opacity': "0.5",
-                  'margin': "0 auto"
-                  // 'float': "left"
                 })
                 .text(treeHeadings.shift())
   })
@@ -91,9 +89,6 @@
                 'background-color': "cornflowerblue",
                 'border-radius': "100%",
                 'opacity': "0.5",
-                'margin': "0 auto",
-                'margin-top': "50px",
-                'margin-bottom': "50px"
             })
             .text(wifiHeadings.shift())
   })
