@@ -13,7 +13,8 @@ $(function(){
             .style('height', function(d){ return (d/100) + 'px' })
             .style({
                 'background-color': "tomato",
-                'border-radius': "100%"
+                'border-radius': "100%",
+                'opacity': "0.7"
             })
 })
 
